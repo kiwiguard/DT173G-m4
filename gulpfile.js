@@ -8,6 +8,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
+const babel = require('gulp-babel');
 
 
 /* Sökvägar */
@@ -26,10 +27,13 @@ function copyHTML() {
     );
 }
 
-/* Sammanslå och minifiera JS filer */
+/* Sammanslå och minifiera och transpilera JS/ES filer */
 function jsTask() {
     return src(files.jsPath)
         .pipe(sourcemaps.init())
+            .pipe(babel({
+                presets: ["@babel/preset-env"]
+            }))
             .pipe(concat('main.js'))
             .pipe(terser())
         .pipe(sourcemaps.write('./'))

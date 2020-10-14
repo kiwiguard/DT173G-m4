@@ -9,6 +9,7 @@ Any edits to project files should be made under 'src', these will automatically 
 * Concatenating SASS files into one single .css-file and minimizing files for faster loading. Added sourcemaps for tracking.
 * Concatenating JavaScript files into one single .js-file and minimizing files for faster loading. Added sourcemaps for tracking.
 * Compressing images from 'src/image'-folder. Creating smaller filesizes for faster loading.
+* Transpiling ES with Babel for compatibility with older browsers
 * Browsersync - realtime updates of changes to project during development. Displays in browser.
 * Moving all files to 'pub'-folder structure for easy deployment on webserver.
 
@@ -21,6 +22,7 @@ This automated environment uses the following packages:
 * **gulp-sourcemaps** - Adds tracking for concatenated CSS and JS files for easy continued development or debugging.
 * **gulp-clean-css** - Minifies CSS files.
 * **gulp-sass** - Converting SASS to CSS
+* **babel** - Transpile ES to ES5
 
 All packages was picked based on popularity and compatibility. 
 
