@@ -22,7 +22,7 @@ This automated environment uses the following packages:
 * **gulp-sourcemaps** - Adds tracking for concatenated CSS and JS files for easy continued development or debugging.
 * **gulp-clean-css** - Minifies CSS files.
 * **gulp-sass** - Converting SASS to CSS
-* **babel** - Transpile ES to ES5
+* **gulp-babel** - Transpile ES to ES5
 
 All packages was picked based on popularity and compatibility. 
 
